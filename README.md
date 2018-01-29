@@ -1,3 +1,7 @@
+Author: Justin Brandenburg, Data Scientist, MapR Data Technologies
+
+Special Assistance From: Mike Aube, Solutions Engineer - MapR Federal, MapR Data Techologies
+
 This is a demo that utilizes the MapR Converged Data Platform, Pyspark, TensorFlow and Python 3.5 for predicting the next time period value in a time series on data from an IoT device.  This is particularly useful for manufacturing and industry 4.0 where sensors are attached to components sending data back for real time monitoring.  This demo takes real time monitoring and enhances with it with prediction capabilities that can generate alerts when the prediction exceeds a threshold of normal behavior. 
 
 To get started, download the MapR Sandbox and install in Virtual Box:
