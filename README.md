@@ -73,4 +73,4 @@ Data Scientist, MapR Data Technologies
 
 ## Acknowledgements: 
 Mike Aube 
-Solutions Engineer - MapR Federal, MapR Data TecOverview:
+Solutions Engineer - MapR Federal, MapR Data Technologies
