@@ -30,14 +30,18 @@ $ ssh -p 2222 root@localhost
    password: mapr
 
 [root@maprdemo ~]# yum install mapr-kafka-rest
+
 [root@maprdemo ~]# echo 'streams.buffer.max.time.ms=100' >> /opt/mapr/kafka-rest/kafka-rest-2.0.1/config/kafka-rest.properties
+
 [root@maprdemo ~]# service mapr-warden restart
+
 [root@maprdemo ~]# exit
 
 ### Login as the 'user01' user, create the MapR Stream and Topic for this demo:
 $ ssh -p 2222 user01@localhost
    password: mapr
 [user01@maprdemo ~]$ maprcli stream create -path /user/user01/iot_stream -produceperm p -consumeperm p -topicperm p
+
 [user01@maprdemo ~]$ maprcli stream topic create -path /user/user01/iot_stream -topic sensor_record
 
 Now use scp or vi to copy the following Python files into your Sandbox VM at '/user/user01'.
