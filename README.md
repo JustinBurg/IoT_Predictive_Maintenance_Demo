@@ -21,6 +21,7 @@ the Port Forwarding rules for the NAT network interface.  If you are
 running the gateway on a different port, please substitute your port
 number for '8082' below.  Add jupyter to this as well.   
 Kafka_REST TCP 127.0.0.1 8082 8082
+
 jupyter TCP 127.0.0.1 9999 9999
 
 ### Login as the ‘root’ user, install the Kafka REST Gateway
