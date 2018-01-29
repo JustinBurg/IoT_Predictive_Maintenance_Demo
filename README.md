@@ -73,8 +73,10 @@ add in stream tokens,username and api-key.  To view your visualization, click on
 
 ## Author: 
 Justin Brandenburg 
+
 Data Scientist, MapR Data Technologies
 
 ## Acknowledgements: 
 Mike Aube 
+
 Solutions Engineer - MapR Federal, MapR Data Technologies
