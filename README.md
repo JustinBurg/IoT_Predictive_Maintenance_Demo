@@ -27,6 +27,7 @@ jupyter TCP 127.0.0.1 9999 9999
 ### Login as the ‘root’ user, install the Kafka REST Gateway
 
 Set the flush timeout for the Kafka REST gateway buffer, and then restart the Warden service:
+
 $ ssh -p 2222 root@localhost
 
 password: mapr
@@ -40,6 +41,7 @@ password: mapr
 [root@maprdemo ~]# exit
 
 ### Login as the 'user01' user, create the MapR Stream and Topic for this demo:
+
 $ ssh -p 2222 user01@localhost
 
 password: mapr
