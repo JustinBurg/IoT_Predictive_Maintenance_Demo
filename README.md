@@ -1,20 +1,20 @@
 # IoT Predictive Maintenance using Recurrent Neural Networks
 
-The idea behind predictive maintenance is that the failure patterns of various types of equipment are predictable. If we can predict when a piece of hardware will fail accurately, and replace that component before it fails, we can achieve much higher levels of operational efficiency.
+This is a demo that utilizes the MapR Converged Data Platform, Pyspark, TensorFlow and Python 3.5 for predicting the next time period value in a time series on data from an IoT device.  This is particularly useful for manufacturing and industry 4.0 where sensors are attached to components sending data back for real time monitoring.  This demo takes real time monitoring and enhances with it with prediction capabilities that can generate alerts when the prediction exceeds a threshold of normal behavior.
+
+If we can predict when a piece of hardware will fail accurately, and replace that component before it fails, we can achieve much higher levels of operational efficiency.
 
 With many devices now including sensor data and other components that send diagnosis reports, predictive maintenance using big data becomes increasingly more accurate and effective.
 
-This is a demo that utilizes the MapR Converged Data Platform, Pyspark, TensorFlow and Python 3.5 for predicting the next time period value in a time series on data from an IoT device.  This is particularly useful for manufacturing and industry 4.0 where sensors are attached to components sending data back for real time monitoring.  This demo takes real time monitoring and enhances with it with prediction capabilities that can generate alerts when the prediction exceeds a threshold of normal behavior.
-
 ## What are we working with?
-Sensor attached to a automated manufacturing device capture position and calibration at each time stamp.  Sensor is capturing real time data on the device and its current health.  The data is stored for historical analysis to identify trends and patterns to determine if any devices need to be taken out of production for health checks and maintenance.
+A sensor attached to a automated manufacturing device capture position and calibration at each time stamp.  The sensor is capturing real time data on the device and the device's positioning.  The data is stored for historical analysis to identify trends and patterns to determine if any devices need to be taken out of production for health checks and maintenance.
 
 ## Data
 2,013 .dat files that, when unpackaged, were xml format
 
 When loaded into the sandbox, take the last 10 .dat files and move to another folder.  These will be the "real-time" data that the producer script will open and read into the MapR stream that is created and that our . 
 
-## What you need
+## Download the MapR Sandbox
 To get started, download the MapR Sandbox and install in Virtual Box:
 https://maprdocs.mapr.com/52/SandboxHadoop/t_install_sandbox_vbox.html
 
@@ -69,7 +69,6 @@ First, go to https://plot.ly/ and set up an account.  Once you have set up an ac
 [user01@maprdemo ~]$ vi ~/.plotly/.credentials
 
 add in stream tokens,username and api-key.  To view your visualization, click on the My Files tab on the plotly website and then "view". 
-
 
 
 ## Author: 
