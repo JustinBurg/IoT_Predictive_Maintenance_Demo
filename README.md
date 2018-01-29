@@ -74,12 +74,3 @@ Data Scientist, MapR Data Technologies
 ## Acknowledgements: 
 Mike Aube 
 Solutions Engineer - MapR Federal, MapR Data TecOverview:
-
- 
-
-Challenge: S 
-Data: 2,013 .dat files that, when unpackaged, were xml format
-
-
-
-
