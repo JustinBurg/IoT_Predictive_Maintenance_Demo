@@ -1,10 +1,6 @@
 Author:  Justin Brandenburg, Data Scientist
 Special Assistance From: Michael F. Aube, Solutions Engineer - Federal
 
-
-
-
-
 =============================================================================
 
 Here are the files you should have as part of this package:
