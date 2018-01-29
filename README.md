@@ -12,6 +12,8 @@ Sensor attached to a automated manufacturing device capture position and calibra
 ## Data
 2,013 .dat files that, when unpackaged, were xml format
 
+When loaded into the sandbox, take the last 10 .dat files and move to another folder.  These will be the "real-time" data that the producer script will open and read into the MapR stream that is created and that our . 
+
 ## What you need
 To get started, download the MapR Sandbox and install in Virtual Box:
 https://maprdocs.mapr.com/52/SandboxHadoop/t_install_sandbox_vbox.html
