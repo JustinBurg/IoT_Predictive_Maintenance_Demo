@@ -1,6 +1,6 @@
 '''
 Bulk convert XML to CSV Single Partition
-Author:  Justin Brandenburg, Data Scientist
+Author:  Justin Brandenburg, Data Scientist @ MapR Data Technologies
 
 
 In Sandbox:
