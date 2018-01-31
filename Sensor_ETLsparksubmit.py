@@ -1,26 +1,25 @@
 '''
 Bulk convert XML to CSV Single Partition
 Author:  Justin Brandenburg, Data Scientist
-Email:   jbrandenburg@mapr.com
 
-Requirements: change Pyspark python to Python 3.5
 
 In Sandbox:
 - upload zip file into /user/user01 using Hue
-- zip file gets unzipped, rename file to rw_raw
+- zip file gets unzipped, rename file to rw_XML_train
 
 In Sandbox as user01 at command line:
-[user01@maprdemo ~]$ cd rw_raw
-[user01@maprdemo rw_raw]$ ls -1 | wc -
-[user01@maprdemo ]$ mkdir rw_XML_train
-[user01@maprdemo rw_raw]$ cd ..
-- copy raw data to new folder for xml conversion
-[user01@maprdemo ~]$ cp -R rw_raw rw_XML_train/
-- delete rw_raw in hue to clear up space 
-- convert to xml
 [user01@maprdemo ~]$ cd rw_XML_train
+
+Count number of files:
+[user01@maprdemo rw_XML_train]$ ls -1 | wc –
+
+The file names have a space in them.  Remove the space with the following:
 [user01@maprdemo rw_XML_train]$ find $1 -name "* *.dat" -type f -print0 | while read -d $'\0' f; do mv -v "$f" "${f// /_}"; done
-[user01@maprdemo rw_XML_train]$ for f in *.dat; do mv -- "$f" "${f%.dat}.xml";    NOTE: if in ubuntu, put "done" at the end
+
+Convert file extension from .dat to .xml:
+[user01@maprdemo rw_XML_train]$ for f in *.dat; do mv -- "$f" "${f%.dat}.xml";
+
+To run pyspark script as pyspark job, use the following command:
 [user01@maprdemo ~]$ /opt/mapr/spark/spark-2.1.0/bin/spark-submit  --packages com.databricks:spark-xml_2.10:0.4.1 /user/user01/Sensor_ETLsparksubmit.py
 '''
 
