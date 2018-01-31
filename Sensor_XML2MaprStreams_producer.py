@@ -1,14 +1,10 @@
 '''
 Ingest XML Files into MapR Streams
-Author:  Justin Brandenburg, Data Scientist
-Email:   jbrandenburg@mapr.com
+Author:  Justin Brandenburg, Data Scientist @ MapR Data Technologies
 
 Requirements: Python 3.5
-If not installed, this demo will not run
 
 This assumes that the raw .dat files have been converted to the proper xml format and the file names have spaces removed.
-[user01@maprdemo rw_raw]$ mkdir rw_XML_stream
-Move the last 10 xml files from the rw_XML_train location into rw_XML_stream (you can do this in Hue)
 
 Run from the command line with the following 
 [user01@maprdemo ~]$ python Sensor_XML2MaprStreams_producer.py
