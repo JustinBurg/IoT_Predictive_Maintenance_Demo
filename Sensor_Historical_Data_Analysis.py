@@ -1,7 +1,6 @@
 '''
 Batch IoT Sensor Forecasting using TensorFlow and RNN
-Author:  Justin Brandenburg, Data Scientist
-Email:   jbrandenburg@mapr.com
+Author:  Justin Brandenburg, Data Scientist @ MapR Data Technologies
 
 Requirements: Python 3.5 and TensorFlow 1.X
 If these are not installed, this demo will not run
