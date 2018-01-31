@@ -1,3 +1,12 @@
+'''
+Consume records from MapR Streams
+Author:  Justin Brandenburg, Data Scientist @ MapR Data Technologies
+
+Requirements: Python 3.5
+
+[user01@maprdemo ~]$ python Stream_IoT_Prediction_Dashboard_plotly.py
+'''
+
 print ("Importing dependencies....")
 import mapr_kafka_rest
 import os
