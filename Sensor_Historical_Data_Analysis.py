@@ -31,6 +31,13 @@ import glob
 import matplotlib
 import matplotlib.pyplot as plt
 import random
+import tensorflow as tf
+import shutil
+import tensorflow.contrib.learn as tflearn
+import tensorflow.contrib.layers as tflayers
+from tensorflow.contrib.learn.python.learn import learn_runner
+import tensorflow.contrib.metrics as metrics
+import tensorflow.contrib.rnn as rnn
 get_ipython().magic('matplotlib inline')
 
 #import the data from MapR-FS, super easy
@@ -44,16 +51,11 @@ df.plot(x="TimeStamp", y="::[scararobot]Ax_J1.ActualPosition", kind="line")
 df.plot(x="TimeStamp", y=["::[scararobot]Ax_J1.ActualPosition","::[scararobot]Ax_J3.TorqueCommand"], kind="line")
 df.plot(x="TimeStamp", y=["::[scararobot]CS_Cartesian.ActualPosition[0]","::[scararobot]CS_Cartesian.ActualPosition[1]"], kind="line")
 
-#remove rows that are all zeros
-df1 = df[df["::[scararobot]speed"] != 0].set_index('TimeStamp')   
-print (len(df1))
-
 #create a new column that will be our feature variable for our model
-#df1['total']=df1.sum(axis=1)
-df1['Total']= df1.select_dtypes(include=['float64','float32']).apply(lambda row: np.sum(row),axis=1)
+df['Total']= df.select_dtypes(include=['float64','float32']).apply(lambda row: np.sum(row),axis=1)
 
 #convert into a time series object
-ts = pd.Series(df1['Total'])
+ts = pd.Series(df['Total'])
 ts.plot(c='b', title='RW Total Sensor Aggregation')
 
 #prepare data and inputs for our TF model
