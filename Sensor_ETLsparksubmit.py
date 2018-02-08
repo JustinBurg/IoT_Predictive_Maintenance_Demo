@@ -27,10 +27,12 @@ Create a new folder :
 Move the last 10 xml files from the rw_XML_train location into rw_XML_stream (you can do this in Hue by selecting the box next to the file name and then actions).
 These will be used when we deploy our finished model.
 
+To run the code interactively in the Pyspark shell:
+[user01@maprdemo ~]$ /opt/mapr/spark/spark-2.1.0/bin/pyspark --packages com.databricks:spark-xml_2.10:0.4.1
+
 To run pyspark script as pyspark job, use the following command:
 [user01@maprdemo ~]$ /opt/mapr/spark/spark-2.1.0/bin/spark-submit  --packages com.databricks:spark-xml_2.10:0.4.1 /user/user01/Sensor_ETLsparksubmit.py
 '''
-
 
 #PYSPARK Executable script
 #import libraries
