@@ -10,7 +10,7 @@ With many devices now including sensor data and other components that send diagn
 A sensor attached to a automated manufacturing device capture position and calibration at each time stamp.  The sensor is capturing real time data on the device and the device's positioning.  The data is stored for historical analysis to identify trends and patterns to determine if any devices need to be taken out of production for health checks and maintenance.
 
 ## Data
-2,013 .dat files that, when unpackaged, were xml format
+2,014 .dat files that, when unpackaged, were xml format
 
 When loaded into the sandbox, take the last 10 .dat files and move to another folder.  These will be the "real-time" data that the producer script will open and read into the MapR stream that is created and that our . 
 
