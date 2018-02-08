@@ -8,10 +8,8 @@ In Sandbox:
 - zip file gets unzipped, rename file to rw_XML_train
 
 In Sandbox as user01 at command line:
-Create a new folder :
-[user01@maprdemo rw_raw]$ mkdir rw_XML_stream
 
-Then go into the rw_XML_train folder
+Go into the rw_XML_train folder
 [user01@maprdemo ~]$ cd rw_XML_train
 
 Count number of files:
@@ -22,6 +20,9 @@ The file names have a space in them.  Remove the space with the following:
 
 Convert file extension from .dat to .xml:
 [user01@maprdemo rw_XML_train]$ for f in *.dat; do mv -- "$f" "${f%.dat}.xml";
+
+Create a new folder :
+[user01@maprdemo rw_raw]$ mkdir rw_XML_stream
 
 Move the last 10 xml files from the rw_XML_train location into rw_XML_stream (you can do this in Hue by selecting the box next to the file name and then actions).
 These will be used when we deploy our finished model.
