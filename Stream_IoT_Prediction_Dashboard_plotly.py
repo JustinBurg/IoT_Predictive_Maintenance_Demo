@@ -4,6 +4,7 @@ Author:  Justin Brandenburg, Data Scientist @ MapR Data Technologies
 
 Requirements: Python 3.5
 
+To Run from command line:
 [user01@maprdemo ~]$ python Stream_IoT_Prediction_Dashboard_plotly.py
 '''
 
@@ -68,10 +69,10 @@ def rnn_model(array, num_periods):
 
     init = tf.global_variables_initializer()      #initialize inputs
     saver = tf.train.Saver()                      #specify saver function
-    DIR="/user/user01/rwTFmodel"                  #directory where trained TF model is saved
+    DIR="/user/user01/TFmodel"                  #directory where trained TF model is saved
 
     with tf.Session() as sess:                    #start a new tensorflow session
-        saver.restore(sess, os.path.join(DIR,"RWsensorTFmodel-1000"))    #restore model         
+        saver.restore(sess, os.path.join(DIR,"IoT_TF_model-1000"))    #restore model         
         y_pred = sess.run(outputs, feed_dict={X: x_data})      #load data from streams
         FORECAST = y_pred[:,(num_periods-1):num_periods]       #only print out the last prediction, which is the forecast for next period
     return (FORECAST)
@@ -125,7 +126,7 @@ def stream_data(topic_name, max):
 
 IoT_Demo_Topic = '/user/user01/iot_stream:sensor_record' 
 max = 402
-DIR="/user/user01/rwTFmodel" 
+DIR="/user/user01/TFmodel" 
 
 stream_tokens = tls.get_credentials_file()['stream_ids']
 token_1 = stream_tokens[0]   # I'm getting my stream tokens from the end to ensure I'm not reusing tokens
