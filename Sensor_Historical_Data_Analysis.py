@@ -2,11 +2,10 @@
 Batch IoT Sensor Forecasting using TensorFlow and RNN
 Author:  Justin Brandenburg, Data Scientist @ MapR Data Technologies
 
-Requirements: Python 3.5 and TensorFlow 1.X
+Requirements: Python 3.5 and TensorFlow 1.3
 If these are not installed, this demo will not run
 
 To install TF:
-[user01@maprdemo ]$ conda install keras
 [user01@maprdemo ]$ conda install tensorflow
 
 This assumes that the XML files have been transformed into a csv file using Sensor_ETLsparksubmit.py
@@ -15,7 +14,7 @@ This script is best demo'd in a jupyter notebook to show the data exploration, f
 testing on historical data that is in MapR-FS.  
 
 create a folder that will capture our saved TF model
-[user01@maprdemo ]$ mkdir rwTFmodel
+[user01@maprdemo ]$ mkdir TFmodel
 
 Start jupyter notebook and acces it via your browser at 127.0.0.1:9999
 [user01@maprdemo ]$ jupyter notebook
@@ -135,7 +134,7 @@ init = tf.global_variables_initializer()
 
 epochs = 1000     #number of iterations or training cycles, includes both the FeedFoward and Backpropogation
 saver = tf.train.Saver()   #we are going to save the model
-DIR="/user/user01/rwTFmodel"  #path where the model will be saved
+DIR="/user/user01/TFmodel"  #path where the model will be saved
 
 with tf.Session() as sess:
     init.run()
@@ -147,7 +146,7 @@ with tf.Session() as sess:
             
     y_pred = sess.run(outputs, feed_dict={X: X_test})
     print(y_pred[:,(num_periods-1):num_periods])
-    saver.save(sess, os.path.join(DIR,"RWsensorTFmodel"),global_step = epochs)
+    saver.save(sess, os.path.join(DIR,"IoT_TF_model"),global_step = epochs)
 
 
 
