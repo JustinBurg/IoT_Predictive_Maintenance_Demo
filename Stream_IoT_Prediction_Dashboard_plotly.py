@@ -2,9 +2,9 @@
 Consume records from MapR Streams
 Author:  Justin Brandenburg, Data Scientist @ MapR Data Technologies
 
-Requirements: Python 3.5
+Requirements: Python 3.5, Plotly,TensorFlow
 
-To Run from command line:
+To Run from command line in MapR 5.2 Sandbox:
 [user01@maprdemo ~]$ python Stream_IoT_Prediction_Dashboard_plotly.py
 '''
 
