@@ -38,15 +38,11 @@ def xml2df(xml_file):
 
 records = 0
 for xml_filename in glob.glob(path+"/*.xml"):
-#for xml_filename in glob.glob(path+"/2016_1_0_12_20160722_1437048553.xml"):
     f = open(xml_filename).read()
     df = xml2df(f).drop_duplicates().reset_index(drop=True).sort_values(['TimeStamp'], ascending=True)
     df['TagValue']=df.TagValue.astype(float).fillna(0)
-    #df['TimeStamp']=pd.to_datetime(df['TimeStamp'])
     df = df.pivot(index='TimeStamp', columns='TagName', values='TagValue').fillna(0).rename_axis(None, axis=1).reset_index()
     df['filename'] = xml_filename
-    #df = df[df["::[scararobot]speed"] != 0]
-    #df['TimeStamp'] = str(datetime.datetime.df['TimeStamp'])
 
     for index,row in df.iterrows():
         records +=1
