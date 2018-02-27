@@ -77,9 +77,6 @@ def rnn_model(array, num_periods):
         FORECAST = y_pred[:,(num_periods-1):num_periods]       #only print out the last prediction, which is the forecast for next period
     return (FORECAST)
 
-
-#IoT_Demo_Topic = '/user/user01/iot_stream:sensor_record' 
-
 def stream_data(topic_name, max):
     topic_partition = 0
     topic_offset = 0
