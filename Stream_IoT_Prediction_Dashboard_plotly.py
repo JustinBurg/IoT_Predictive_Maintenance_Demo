@@ -114,7 +114,7 @@ def stream_data(topic_name, max):
             s_2.write(dict(x=x2,y=y2))
             #predicted_metric_list.append(int(predicted_value))
             print ("Next timestamp aggregate metric prediction: " + str(predicted_value))
-            if (predicted_value < 450) or (predicted_value > -200) :
+            if (-200 <= predicted_value <= 450):
                 print ("Forecast does not exceed threshold for alert!\n")
             else:
                 print ("Forecast exceeds acceptable threshold - Alert Sent!\n")
