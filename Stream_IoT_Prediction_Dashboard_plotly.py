@@ -144,19 +144,43 @@ trace2 = go.Scatter(x=[],y=[],mode='markers',
 
 data = [trace1, trace2]
 layout = go.Layout(
-    title='Sensor Feed',
-    font=dict(family='Courier New, monospace', size=24, color='#000000'),
+    images= [
+        dict(
+	        source= "https://raw.githubusercontent.com/JustinBurg/IoT_Predictive_Maintenance_Demo/master/mapr_logo.png",
+	        xref= "paper",
+	        yref= "paper",
+	        x= 0.389,
+	        y= 1.03,
+	        sizex= 0.1,
+	        sizey= 0.1,
+	        xanchor= "right",
+	        yanchor= "bottom"),
+        dict(
+	        source= "https://raw.githubusercontent.com/JustinBurg/IoT_Predictive_Maintenance_Demo/master/mapr_logo.png",
+	        xref= "paper",
+	        yref= "paper",
+	        x= 0.80,
+	        y= 1.03,
+	        sizex= 0.1,
+	        sizey= 0.1,
+	        xanchor= "right",
+	        yanchor= "bottom")],
+    title='Stream from Device 1',
+    font=dict(family='Roboto, monospace', size=30, color='white'),
+    plot_bgcolor='rgba(8,8,8,1)',
+    paper_bgcolor='rgba(8,8,8,1)',
     xaxis=dict(
         domain=[0, 1.00],
         title='Time Period',
-        titlefont=dict(family='Courier New, monospace',size=16,color='#000000')
+        titlefont=dict(family='Roboto, monospace',size=18,color='white'),
+        tickfont=dict(family='Roboto, monospace',size=16,color='white')
     ),
     yaxis=dict(
         domain=[0, 1.00],
         title='Measurement',
-        titlefont=dict(family='Courier New, monospace',size=16,color='#000000'),
-    ))
-              
+        titlefont=dict(family='Roboto, monospace',size=18,color='white'),
+        tickfont=dict(family='Roboto, monospace',size=16,color='white')
+    ))         
     
     
 fig = go.Figure(data=data, layout=layout)
