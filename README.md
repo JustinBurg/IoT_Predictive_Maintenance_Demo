@@ -62,6 +62,8 @@ The Python files included in this demo package assume that you have installed
 Python 3.5.2 AND the "Requests HTTP Library for Python".
 
 ### For the visualization:
+# Plotly no longer has cloud supported streaming.  I will be working on another visualization application to replace Plotly. 
+
 First, go to https://plot.ly/ and set up an account.  Once you have set up an account, go to your account settings and on the left you will see a menu selection for API key.  Click that and then "Regenerate Key".   Then set up two Streaming API tokens.  Once this is completed  you need to install the plotly package in the Sandbox and then set up your credentials.  In the sandbox do the following:
 
 [user01@maprdemo ~]$ pip install plotly
